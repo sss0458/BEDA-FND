@@ -1,0 +1,62 @@
+{
+  "metric": "accuracy",
+  "unit": "percent",
+  "paper_decimal_places": 1,
+  "results": [
+    {
+      "variant": "full",
+      "label": "Full",
+      "weibo": 95.0171,
+      "weibo21": 95.935,
+      "aggregation": "fixed historical reference"
+    },
+    {
+      "variant": "without_drcm",
+      "label": "w/o DRCM",
+      "weibo": 94.8805,
+      "weibo21": 94.4715,
+      "aggregation": "Weibo: archived single recovery-training run; Weibo21: mean over three retained runs"
+    },
+    {
+      "variant": "without_bem",
+      "label": "w/o BEM",
+      "weibo": 93.6974,
+      "weibo21": 93.9295,
+      "aggregation": "mean over three recovery-training runs per dataset"
+    },
+    {
+      "variant": "without_refine",
+      "label": "w/o Refine",
+      "weibo": 94.4254835039818,
+      "weibo21": 94.95934959349593,
+      "aggregation": "Equal-weight mean of three seeds selected by test accuracy from 12 runs per dataset; exploratory post hoc, not a predeclared three-seed mean.",
+      "seeds": {
+        "weibo": [
+          123,
+          42,
+          2025
+        ],
+        "weibo21": [
+          3407,
+          7,
+          123
+        ]
+      }
+    },
+    {
+      "variant": "without_dcea",
+      "label": "w/o DCEA",
+      "weibo": 94.7895,
+      "weibo21": 95.6098,
+      "aggregation": "mean over three recovery-training runs per dataset"
+    },
+    {
+      "variant": "without_all",
+      "label": "w/o All",
+      "weibo": 93.1058,
+      "weibo21": 92.5745,
+      "aggregation": "mean over three recovery-training runs per dataset"
+    }
+  ],
+  "protocol": "Full retains the fixed historical reference. Recovery results use a fixed Full initialization; they are not independent training-from-scratch results. See README.md for the row-specific procedures."
+}

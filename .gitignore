@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# IDE and operating system
+.DS_Store
+.idea/
+.vscode/
+
+# Data and caches
+data/
+dataset/
+datasets/
+raw_data/
+processed_data/
+weibo/
+Weibo/
+weibo21/
+Weibo21/
+Weibo_21/
+*.pkl
+*.xlsx
+*.csv
+
+# Pretrained assets and checkpoints
+src/pretrained_model/
+src/pretrained/
+src/*.pt
+src/*.pth
+checkpoints/
+*.ckpt
+*.bin
+*.safetensors
+
+# Experiment outputs
+outputs/
+runs/
+logs/
+*.log
+*.npz
+
+# Generated figures
+*.png
+*.pdf
+*.eps
