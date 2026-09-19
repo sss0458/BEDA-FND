@@ -34,7 +34,7 @@ STRUCTURAL_VARIANTS = {
         "domain_loss_weight": 1.0,
         "view_loss_weight": 1.0,
     },
-    # Paper: w/o Refine; archived experiment name: dcea_reference_only.
+    # Paper: w/o Refine.
     "without_refine": {
         "drcm_mode": "full",
         "output_mode": "reference_only",
