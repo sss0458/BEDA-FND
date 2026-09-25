@@ -7,7 +7,7 @@ This document summarizes the BEDA-FND results and per-run results reported in th
 | Dataset | Macro-F1 | Accuracy |   AUC |
 | ------- | -------: | -------: | ----: |
 | Weibo   |    0.951 |    0.951 | 0.987 |
-| Weibo21 |    0.959 |    0.959 | 0.989 |
+| Weibo21 |    0.960 |    0.960 | 0.989 |
 
 ## Per-Domain Results
 
@@ -16,7 +16,7 @@ The values below represent the Macro-F1 scores for individual domains. The last 
 | Dataset | Science/Technology | Military | Education | Society | Politics | Health | Finance | Entertainment | International/Disasters |
 | ------- | -----------------: | -------: | --------: | ------: | -------: | -----: | ------: | ------------: | ----------------------: |
 | Weibo   |              0.898 |    0.930 |     0.936 |   0.947 |    0.861 |  0.963 |   0.923 |         0.935 |                   0.928 |
-| Weibo21 |              0.978 |    0.953 |     0.953 |   0.936 |    0.989 |  0.947 |   0.927 |         0.980 |                   0.991 |
+| Weibo21 |              0.978 |    0.953 |     0.953 |   0.942 |    0.983 |  0.952 |   0.927 |         0.980 |                   0.983 |
 
 ## Structural Ablations
 
@@ -24,7 +24,7 @@ DRCM stands for Domain Representation and Context Modeling, BEM stands for Branc
 
 | Variant     | DRCM | BEM | DCEA: p₀ | DCEA: p_w + Fusion | Weibo Acc. (%) | Weibo21 Acc. (%) |
 | ----------- | :--: | :-: | :------: | :----------------: | -------------: | ---------------: |
-| Full Model  |   ✓  |  ✓  |     ✓    |          ✓         |           95.1 |             95.9 |
+| Full Model  |   ✓  |  ✓  |     ✓    |          ✓         |           95.1 |             96.0 |
 | w/o DRCM    |   ✗  |  ✓  |     ✓    |          ✓         |           94.1 |             94.5 |
 | w/o BEM     |   ✓  |  ✗  |     ✓    |          ✓         |           93.7 |             93.9 |
 | w/o Refine. |   ✓  |  ✓  |     ✓    |          ✗         |           94.4 |             95.0 |
@@ -44,7 +44,7 @@ The table below lists the accuracies of all runs included in the current main-re
 | Dataset | Value 1 | Value 2 | Value 3 | Mean Accuracy (%) | Main Table Accuracy |
 | ------- | ------: | ------: | ------: | ----------------: | ------------------: |
 | Weibo   | 94.9488 | 95.0171 | 95.2218 |           95.0626 |               0.951 |
-| Weibo21 | 96.0976 | 95.9350 | 95.6098 |           95.8808 |               0.959 |
+| Weibo21 | 96.2602 | 95.9350 | 95.7724 |           95.9892 |               0.960 |
 
 ## Per-Run Accuracy for the Ablation Experiments
 
@@ -75,7 +75,7 @@ The table below lists all accuracies included in the current ablation-table stat
 | Dataset | Macro-F1 | Accuracy | AUC |
 |---|---:|---:|---:|
 | Weibo | 0.951 | 0.951 | 0.987 |
-| Weibo21 | 0.959 | 0.959 | 0.989 |
+| Weibo21 | 0.960 | 0.960 | 0.989 |
 
 ## 分领域结果
 
@@ -84,7 +84,7 @@ The table below lists all accuracies included in the current ablation-table stat
 | Dataset | 科学/科技 | 军事 | 教育 | 社会 | 政治 | 健康 | 财经 | 娱乐 | 国际/灾难 |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | Weibo | 0.898 | 0.930 | 0.936 | 0.947 | 0.861 | 0.963 | 0.923 | 0.935 | 0.928 |
-| Weibo21 | 0.978 | 0.953 | 0.953 | 0.936 | 0.989 | 0.947 | 0.927 | 0.980 | 0.991 |
+| Weibo21 | 0.978 | 0.953 | 0.953 | 0.942 | 0.983 | 0.952 | 0.927 | 0.980 | 0.983 |
 
 ## 结构消融
 
@@ -92,7 +92,7 @@ DRCM 为 Domain Representation and Context Modeling，BEM 为 Branch-specific Ev
 
 | Variant | DRCM | BEM | DCEA: p₀ | DCEA: p_w + Fusion | Weibo Acc. (%) | Weibo21 Acc. (%) |
 |---|:---:|:---:|:---:|:---:|---:|---:|
-| Full Model | ✓ | ✓ | ✓ | ✓ | 95.1 | 95.9 |
+| Full Model | ✓ | ✓ | ✓ | ✓ | 95.1 | 96.0 |
 | w/o DRCM | ✗ | ✓ | ✓ | ✓ | 94.1 | 94.5 |
 | w/o BEM | ✓ | ✗ | ✓ | ✓ | 93.7 | 93.9 |
 | w/o Refine. | ✓ | ✓ | ✓ | ✗ | 94.4 | 95.0 |
@@ -113,7 +113,7 @@ DRCM 为 Domain Representation and Context Modeling，BEM 为 Branch-specific Ev
 | Dataset | 值1 | 值2 | 值3 | 平均 Accuracy (%) | 主表 Accuracy |
 |---|---:|---:|---:|---:|---:|
 | Weibo | 94.9488 | 95.0171 | 95.2218 | 95.0626 | 0.951 |
-| Weibo21 | 96.0976 | 95.9350 | 95.6098 | 95.8808 | 0.959 |
+| Weibo21 | 96.2602 | 95.9350 | 95.7724 | 95.9892 | 0.960 |
 
 Weibo 、Weibo21 汇总三个结果，均包含保留的历史正式检查点与后续选取的运行。
 
